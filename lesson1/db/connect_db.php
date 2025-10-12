@@ -11,7 +11,7 @@ if($conn->connect_errno){
     die("Connect failed: ".$conn->connect_error);
 }
 else{
-    echo "success";
+    $connected= "success";
 }
 
 $conn->set_charset('utf8mb4');

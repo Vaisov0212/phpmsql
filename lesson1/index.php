@@ -23,6 +23,7 @@ session_start();
                 echo '<div class="alert alert-success" role="alert">';
                     echo $_SESSION["success"];
                     echo   "  </div>";
+                    unset($_SESSION["success"]);
                 ?>
       
     <div class="container mt-5">
@@ -41,6 +42,7 @@ session_start();
                                    echo  "<li >".$name." ".$message ."</li>";
                                 }
                             }
+                             unset($_SESSION["errors"]);
                         ?>
                         </ul>
                         
@@ -85,8 +87,3 @@ session_start();
     
 </body>
 </html>
-
-<?php
-
-session_destroy()
-?>
