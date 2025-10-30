@@ -11,6 +11,9 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         $message["ism"]="to'ldirilmgan";
         $error++;
     }
+    if(!empty($_FILES["file"]["name"])){
+        
+    }
       if(!empty($_POST["email"])){
         $email=$_POST["email"];
     }

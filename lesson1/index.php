@@ -47,7 +47,7 @@ session_start();
                         </ul>
                         
                     <div class="card-body">
-                        <form id="createForm" action="db/insert_users.php" method="POST" >
+                        <form id="createForm" enctype="multipart/form-data" action="db/insert_users.php" method="POST" >
                             <div class="mb-3">
                                 <label for="full_name" class="form-label">To'liq ismi *</label>
                                 <input type="text" class="form-control" name="name"  id="full_name" >
@@ -66,6 +66,10 @@ session_start();
                             <div class="mb-3">
                                 <label for="confirm_password" class="form-label">Parolni tasdiqlang *</label>
                                 <input type="password" name="confirm_pass" class="form-control" id="confirm_password" >
+                            </div>
+                              <div class="mb-3">
+                                <label for="confirm_password" class="form-label">Images *</label>
+                                <input type="file" name="file" class="form-control" id="confirm_password" >
                             </div>
 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">

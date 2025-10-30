@@ -10,7 +10,7 @@ $sql="SELECT id, name,email,password FROM users";
 $users=$conn->query($sql);
 
 if($users->num_rows>0){
-    $users->fetch_assoc();
+    $users->fetch_object();
 }
 
 $conn->close();
@@ -35,11 +35,13 @@ $conn->close();
         </div>
     </nav>
          <?php
-                if(!empty($_SESSION["success"]))
+                if(!empty($_SESSION["success"])){
                     echo '<div class="alert alert-success" role="alert">';
                     echo $_SESSION["success"];
                     echo   "  </div>";
                     unset($_SESSION["success"]);
+                }
+                   
                 ?>
     <div class="container mt-5">
         <div class="row mb-4">
@@ -80,7 +82,7 @@ $conn->close();
                               foreach($users as $user){
                                echo ' <tr>
                                         <td>'.$user["id"].'</td>
-                                        <td>'.$user["name"].'</td>
+                                        <td>'.$use["name"].'</td>
                                         <td>'.$user["email"].'</td>
                                         <td>
                                               <form action="">
