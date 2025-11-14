@@ -1,9 +1,10 @@
 <?php
 
-$user=["name"=>"Vali", "eage"=>16, "city"=>"Karvak"];
+$arr=["c",2,"d",-7,"a",0,12];
+$karr=["b"=>56, "a"=>-89, "c"=>1];
+// rsort($arr);
+// arsort($karr);
+krsort($karr);
 
-foreach($user as $key=>$value){
-            echo $key . "----". $value . "<br>";
-}
-
+print_r($karr);
 ?>
